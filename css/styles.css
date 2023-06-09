@@ -7,6 +7,10 @@
   --bagr-btn: #f4f4fd;
   --border-color: #e7e9fc;
   --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --footer-soc: #31d0aa;
+  --modal-back: #fcfcfc;
+  --modal-btn: #e7e9fc;
+  --fill-icon: #8e8f99;
 }
 
 body {
@@ -142,7 +146,7 @@ button {
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background: #404bbf;
+  background: var(--change-color);
   margin-top: 20px;
 }
 
@@ -172,7 +176,7 @@ button {
     url(../images/people-office\ .jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 1440px cover;
+  background-size: 1440px;
 }
 
 .hero-tittle {
@@ -193,7 +197,7 @@ button {
   cursor: pointer;
   margin: 0 auto;
   display: block;
-  background: #4d5ae5;
+  background: var(--logo-color);
   border-radius: 4px;
   border: none;
   align-items: center;
@@ -244,18 +248,22 @@ button {
 .order-item {
   width: calc((100% - 72px) / 4);
 }
+.order-item link {
+}
+.order-item-icons {
+  width: 264px;
+  height: 112px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  background: var(--bagr-btn);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .order-item-link {
 }
 
-.order-item-link span {
-  width: 264px;
-  height: 112px;
-  background-color: #f4f4fd;
-  border-radius: 4px;
-  margin-bottom: 8px;
-  display: block;
-  padding: 24px 100px;
-}
 .order-list-icon {
 }
 /*------------------------------------WHAT WE ARE DOING----------------------------*/
@@ -331,6 +339,8 @@ button {
   margin-bottom: 8px;
 }
 
+/*?-----------ICONS-------------*/
+
 .team-list-icons {
   display: flex;
   align-items: center;
@@ -338,7 +348,6 @@ button {
   gap: 24px;
 }
 .team-list-icons {
-  padding: 0;
 }
 .team-item-icons {
   display: flex;
@@ -349,15 +358,70 @@ button {
   border-radius: 50%;
   fill: var(--bagr-btn);
   background-color: var(--logo-color);
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.team-item-icons:hover,
+.team-item-icons:focus {
+  background-color: var(--change-color);
+}
+
+/*-----------------------CUSTOMERS------------------------*/
+.customers {
+  padding: 120px 156px;
+}
+
+.customers-tittle {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--brand-color);
+  margin-bottom: 72px;
+}
+.cont-customers-icons {
+}
+.customers-list-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.ctmrs-item-icons {
+  width: 168px;
+  height: 88px;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  fill: var(--fill-icon);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition-property: fill, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ctmrs-item-icons:hover,
+.ctmrs-item-icons:focus {
+  fill: var(--change-color);
+  border: 1px solid #404bbf;
+}
+
 /*----------------------------FOOTER---------------------------------*/
 
 .footer {
-  display: block;
   padding: 100px 0;
   background: var(--brand-color);
 }
 .footer-conteiner {
+  display: flex;
+  gap: 120px;
 }
 .footer-logo {
   font-family: "Raleway", sans-serif;
@@ -381,6 +445,43 @@ button {
   max-width: 264px;
 }
 
+/*?-----------------------------------------?*/
+.footer-soc {
+  width: 208px;
+}
+
+.footer-soc-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--foc-hov-text);
+  margin-bottom: 16px;
+}
+.footer-soc-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.footer-item-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  fill: var(--bagr-btn);
+  background-color: var(--logo-color);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-item-icons:hover,
+.footer-item-icons:focus {
+  background-color: var(--footer-soc);
+}
 /*!--------------------------------PORTFOLIO-------------------------------!*/
 
 /*?------------------------------MENU---------------------------*/
@@ -409,8 +510,9 @@ button {
   border: 1px solid var(--border-color);
   border-radius: 4px;
   padding: 12px 24px;
-  transition: color, border, background-color,
-    450ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 450ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-item:focus,
@@ -435,6 +537,7 @@ button {
 }
 .portfol-list-item {
   width: calc((100% - 48px) / 3);
+  position: relative;
 }
 .technologies-team {
   font-weight: 500;
@@ -450,4 +553,72 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text-color);
+}
+.portfolio-scroll {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-scroll:hover .portfolio-cover-item {
+  transform: translate(0);
+}
+.portfolio-cover-item {
+  position: absolute;
+  background-color: var(--logo-color);
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 40px 32px 0 32px;
+  transform: translateY(100%);
+  transition: transform var(--transition);
+}
+.portfolio-cover-text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--bagr-btn);
+  width: 296px;
+}
+
+/*?----------------------MODAL--------------------------**/
+.bedrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity var(--transition), visibility var(--transition);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleY(1);
+  transition: transform var(--transition);
+  width: 408px;
+  min-height: 584px;
+  background-color: var(--modal-back);
+  border-radius: 4px;
+}
+.button-modal {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  width: 24px;
+  height: 24px;
+  background-color: var(--modal-btn);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+}
+.modal-btn {
+}
+.bedrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scaleY(0);
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
