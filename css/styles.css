@@ -76,6 +76,8 @@ button {
 .header {
   display: flex;
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-container {
   display: flex;
@@ -137,17 +139,16 @@ button {
 }
 .current {
   position: relative;
+  color: #404bbf;
 }
 .current::after {
   content: "";
   position: absolute;
   left: 0px;
-  top: 44px;
-  width: 100%;
+  bottom: -1px;
   height: 4px;
-  border-radius: 2px;
   background: var(--change-color);
-  margin-top: 20px;
+  border-radius: 2px;
 }
 
 .header-soc-text:focus,
