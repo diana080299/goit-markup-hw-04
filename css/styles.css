@@ -172,12 +172,14 @@ button {
   align-items: center;
   height: 600px;
   padding: 188px 0;
-  background-color: var(--brand-color);
+}
+.hero-fon {
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/people-office\ .jpg);
+  max-width: 1440;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -208,6 +210,7 @@ button {
   height: 56px;
   padding: 16px 32px;
   min-width: 169px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:focus,
@@ -380,7 +383,7 @@ button {
 
 .customers-tittle {
   font-size: 36px;
-  line-height: 1.1;
+  line-height: 1.11;
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--brand-color);
@@ -413,8 +416,8 @@ button {
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.customers-icon:hover,
-.customers-icon:focus {
+.custmers-icons:hover,
+.custmers-icons:focus {
   color: var(--change-color);
   border-color: #404bbf;
 }
@@ -582,7 +585,7 @@ button {
   overflow: hidden;
 }
 .portfolio-scroll:hover .portfolio-cover-text {
-  transform: translate(0);
+  transform: translateY(0%);
 }
 .portfolio-cover-text {
   position: absolute;
@@ -639,17 +642,16 @@ button {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .button-modal:hover,
 .button-modal:focus {
   background-color: var(--change-color);
   border: none;
-}
-.modal-btn {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-btn:hover,
-.modal-btn:focus {
   fill: var(--foc-hov-text);
+}
+
+.customers-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bedrop.is-hidden .modal {
