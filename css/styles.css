@@ -178,6 +178,8 @@ button {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-tittle {
@@ -560,6 +562,11 @@ button {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   transform: translateY(0%);
 }
+.link-portfolio:hover .portfolio-cover-text,
+.link-portfolio:focus .portfolio-cover-text {
+  transform: translateY(0%);
+}
+
 .technologies-team {
   font-weight: 500;
   font-size: 20px;
@@ -579,9 +586,7 @@ button {
   position: relative;
   overflow: hidden;
 }
-.portfolio-scroll:hover .portfolio-cover-text {
-  transform: translateY(0%);
-}
+
 .portfolio-cover-text {
   position: absolute;
   top: 0;
