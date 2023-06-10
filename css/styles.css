@@ -152,6 +152,7 @@ button {
   height: 4px;
   background: var(--change-color);
   border-radius: 2px;
+  width: 100%;
 }
 
 .header-soc-text:focus,
