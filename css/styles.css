@@ -53,6 +53,7 @@ button {
   cursor: pointer;
   border: none;
 }
+
 .section {
   padding: 0 15px;
   margin: 0 auto;
@@ -74,6 +75,9 @@ button {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+input {
+  font-family: inherit;
 }
 /*-------------------------HEADER------------------------------*/
 .header {
@@ -492,6 +496,66 @@ button {
 .footer-item-icons:focus {
   background-color: var(--footer-soc);
 }
+
+/*?-----------------------------------------?*/
+
+.footer-form-email {
+  max-width: 453px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 80px;
+}
+
+.footer-label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--foc-hov-text);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer-form-email input {
+}
+.footer-input {
+  width: 264px;
+  border-radius: 4px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: var(--foc-hov-text);
+  padding: 8px 0 8px 16px;
+}
+
+.footer-input::placeholder {
+  color: var(--foc-hov-text);
+}
+.footer-btn-subm {
+  width: 165px;
+  height: 40px;
+  background-color: #4d5ae5;
+}
+
+.footer-form-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--foc-hov-text);
+  background-color: #4d5ae5;
+  border-radius: 4px;
+  margin-bottom: 0;
+  width: 145px;
+  height: 40px;
+}
+.footer-icon {
+  fill: #ffffff;
+}
+
 /*!--------------------------------PORTFOLIO-------------------------------!*/
 
 /*?------------------------------MENU---------------------------*/
